@@ -5,7 +5,7 @@ WDI_Homework
 [![How to fork this
 repo](https://github-images.s3.amazonaws.com/help/Bootcamp-Fork.png)](../../fork)
 
-Fork today's homework repo, which is an extension of your lab [imdb-private](https://github.com/clearf/rails-todo-with-contacts)
+Fork [today's homework repo](../../fork), which is an extension of previous work.
 Change directories to the lab repository that you worked on in class.
 
 Run 
