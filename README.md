@@ -5,37 +5,23 @@ WDI_Homework
 [![How to fork this
 repo](https://github-images.s3.amazonaws.com/help/Bootcamp-Fork.png)](../../fork)
 
-To get started, [fork this repo](../../fork) to the github account of ONE of your group
-memebers to create a new repository for your group (We'll call this person the
-*repository owner*). (Or, if you're working alone, to your repo)
+Fork today's homework repo, which is an extension of your lab [imdb-private](https://github.com/clearf/rails-todo-with-contacts)
+Change directories to the lab repository that you worked on in class.
 
+Run 
 
-The repository owner should then [add the other group members as
-github
-collaborators](https://help.github.com/articles/how-do-i-add-a-collaborator).
-(Skip this if working alone)
+``git remote add private-imdb <URL>``
 
-Each person in the group should clone the repo to their local machine
+where <URL> is the ssh URL from your forked repository (what you usually use to clone from, something in the form of "git@github.com:clearf/rails-todo-with-contacts.git")
 
-```
-# Get the URL from the repository owner's repo as usual. It will be of the form
-git clone git@github.com:<username>/<assignment>.git 
-# Clones your fork of the repository into the current directory in terminal
-```
+``git pull private-imdb master``
+You may be asked to commit a merge. Save and close the merge message. 
 
-```
-# pull, work, commit, and push to the repository as per the normal github
-# workflow
-git add .
-git commit -m "Description of change made"
-git push origin master
-```
+``git push private-imdb master``
 
-#### Submitting
-* To submit the homework, make your final commits, then have the repository
-"owner" issue a [Pull
-Request](https://help.github.com/articles/using-pull-requests) within github.
-This will send us your code. Include a reasonable comment describing what you're
-doing. 
+Now when you push, you'll do 
+``git push private-imdb master``
+
+When you're done, issue a pull request from the private-imdb forked repository. 
 
 
