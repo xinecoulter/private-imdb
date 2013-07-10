@@ -5,7 +5,7 @@ class MoviesController < ApplicationController
   end
 
   def index
-    if params[:task]
+    if params[:title]
       @movies = Movie.where(title: params[:title])
     else
       @movies = Movie.all

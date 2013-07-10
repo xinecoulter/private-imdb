@@ -6,4 +6,10 @@
   <button>Search</button>
 </form>
 
-<%= render @movies %>
+<ul>
+  <% @movies.each do |movie| %>
+    <li>
+      <%= movie.title %>
+    </li>
+  <% end %>
+</ul>
