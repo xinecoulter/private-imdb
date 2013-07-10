@@ -1,0 +1,9 @@
+<h1>Check out these movies!</h1>
+
+<form action="/movies" method="get">
+  <label for="title">Search by movie title</label><br/>
+  <input type="string" name="title">
+  <button>Search</button>
+</form>
+
+<%= render @movies %>
