@@ -44,7 +44,14 @@ class MoviesController < ApplicationController
 
   def edit
     @movie = Movie.find(params[:id])
-    @movie.rating = params[:rating]
+    case params[:rating]
+    when "favorite"
+      @movie.rating = 100
+    when "up"
+      @movie.rating += 1
+    when "down"
+      @movie.rating -= 1
+    end
     @movie.save
     render "show"
   end
