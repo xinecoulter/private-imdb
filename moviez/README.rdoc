@@ -1,3 +1,17 @@
+Christine's Progress!
+
+I accomplished like...95% of the lab portion:
+  - Be aware there are two searches. The search on the index is for searching movies already in the personal database (it has to be like Movie (1999) for that to work). Then there's a search for movies through IMDB in the new movie page. This search shows 10 search results. If you favorite one, it gets added to the personal database and its rating changes to 100 (I did not do a separate 'save' versus 'favorite').
+  - If you look at an individual movie from the personal database, you can change the rating by using the +1, -1, and favorite buttons. Very proud of this. Actually did a happy dance in my apartment when this worked. Scared the cats. Wondering if this should be a put request thing rather than post. Would like feedback.
+  - Used partial view for navigation. Did not use partial view for individual movie pages.
+
+Got somewhere with the hw portion (50-75%??):
+  - Created migration files for actors table and join table. Created actor model.
+  - When adding a new movie from IMDB to the database, I am able to retrieve the cast members array, break them up and save them as objects in the actors table of the personal database...then push them into movie.actors array. Able to see list of actors in individual movie pages and click on their names to go to individual actor pages. Able to see which movies that actor is associated with links to the individual movie page.
+  - Created form to add a new actor. Still need to make sure this works. Still need to make sure I don't add a duplicate actor.
+
+
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
