@@ -8,7 +8,7 @@
   <li>Cast:
     <ul>
       <% @movie.actors.each do |actor| %>
-        <li><%= actor.name %></li>
+        <li><a href="actors/:id"><%= actor.name %></a></li>
       <% end %>
     </ul>
   </li>
