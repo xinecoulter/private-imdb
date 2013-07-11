@@ -5,6 +5,7 @@ Moviez::Application.routes.draw do
   post '/movies' => 'movies#create', as: 'add_new_favorite'
   post '/movies/:id' => 'movies#edit', as: 'edit_movie'
   resources :movies
+  resources :actors
 
 #     movies GET    /movies(.:format)          movies#index
 #            POST   /movies(.:format)          movies#create
