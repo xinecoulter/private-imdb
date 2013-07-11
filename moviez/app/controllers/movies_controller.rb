@@ -34,6 +34,11 @@ class MoviesController < ApplicationController
     movie.mpaa_rating = favorite.mpaa_rating
     movie.rating = 100
     movie.poster = favorite.poster
+    favorite.cast_members.each do |cast_member|
+      actor = Actor.new(name: cast_member)
+      actor.save
+      movie.actors << actor
+    end
     movie.save
     redirect_to "/movies"
   end

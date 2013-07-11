@@ -5,5 +5,12 @@
   <li>Plot: <%= @movie.plot %></li>
   <li>MPAA Rating: <%= @movie.mpaa_rating %></li>
   <li>Rating: <%= @movie.rating %><%= button_to "+1", edit_movie_path(rating: "up") %><%= button_to "-1", edit_movie_path(rating: "down") %></li>
+  <li>Cast:
+    <ul>
+      <% @movie.actors.each do |actor| %>
+        <li><%= actor.name %></li>
+      <% end %>
+    </ul>
+  </li>
 </ul>
 <%= button_to "Favorite this movie", edit_movie_path(rating: "favorite") %>
