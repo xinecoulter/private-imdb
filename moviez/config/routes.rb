@@ -2,6 +2,7 @@ Moviez::Application.routes.draw do
   root :to => 'welcome#index'
   get '/movies/search' => 'movies#search', as: 'movies_search'
   get '/movies/new/search' => 'movies#new_search', as: 'new_movies_search'
+  post '/movies' => 'movies#create', as: 'add_new_favorite'
   resources :movies
 
 #     movies GET    /movies(.:format)          movies#index
