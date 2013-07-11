@@ -12,6 +12,16 @@ class MoviesController < ApplicationController
     end
   end
 
+  def new_search
+    @movie = Imdb::Search.new(params[:title]).movies.first
+    render "new"
+  end
+
   def new
+    if params[:title]
+      @movie = Imdb::Search.new(params[:title]).movies.first
+    else
+      @movie = nil
+    end
   end
 end

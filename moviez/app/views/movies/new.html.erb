@@ -5,3 +5,12 @@
   <input type="string" name="title">
   <button>Search</button>
 </form>
+
+<% unless @movie == nil %>
+  <h3><%= @movie.title %></h3>
+    <ul>
+      <li>Year: <%= @movie.year %></li>
+      <li>Plot: <%= @movie.plot %></li>
+      <li>MPAA Rating: <%= @movie.mpaa_rating %></li>
+    </ul>
+<% end %>
