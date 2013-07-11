@@ -3,6 +3,7 @@ Moviez::Application.routes.draw do
   get '/movies/search' => 'movies#search', as: 'movies_search'
   get '/movies/new/search' => 'movies#new_search', as: 'new_movies_search'
   post '/movies' => 'movies#create', as: 'add_new_favorite'
+  post '/movies/:id' => 'movies#edit', as: 'edit_movie'
   resources :movies
 
 #     movies GET    /movies(.:format)          movies#index

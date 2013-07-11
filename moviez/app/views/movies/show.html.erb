@@ -6,3 +6,4 @@
   <li>MPAA Rating: <%= @movie.mpaa_rating %></li>
   <li>Rating: <%= @movie.rating %></li>
 </ul>
+<%= button_to "Favorite this movie", edit_movie_path(rating: 100) %>

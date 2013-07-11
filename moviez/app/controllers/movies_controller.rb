@@ -41,4 +41,11 @@ class MoviesController < ApplicationController
   def show
     @movie = Movie.find(params[:id])
   end
+
+  def edit
+    @movie = Movie.find(params[:id])
+    @movie.rating = params[:rating]
+    @movie.save
+    render "show"
+  end
 end
