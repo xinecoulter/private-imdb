@@ -24,4 +24,17 @@ class MoviesController < ApplicationController
       @movies = nil
     end
   end
+
+  def create
+    favorite = Imdb::Search.new(params[:title]).movies.first
+    movie = Movie.new
+    movie.title = favorite.title
+    movie.year = favorite.year
+    movie.plot = favorite.plot
+    movie.mpaa_rating = favorite.mpaa_rating
+    movie.rating = 100
+    movie.poster = favorite.poster
+    movie.save
+    redirect_to "/movies"
+  end
 end
