@@ -26,15 +26,15 @@ class MoviesController < ApplicationController
   end
 
   def create
-    favorite = Imdb::Search.new(params[:title]).movies.first
+    new_movie = Imdb::Search.new(params[:title]).movies.first
     movie = Movie.new
-    movie.title = favorite.title
-    movie.year = favorite.year
-    movie.plot = favorite.plot
-    movie.mpaa_rating = favorite.mpaa_rating
-    movie.rating = 100
-    movie.poster = favorite.poster
-    favorite.cast_members.each do |cast_member|
+    movie.title = new_movie.title
+    movie.year = new_movie.year
+    movie.plot = new_movie.plot
+    movie.mpaa_rating = new_movie.mpaa_rating
+    movie.rating = params[:rating]
+    movie.poster = new_movie.poster
+    new_movie.cast_members.each do |cast_member|
       actor = Actor.new(name: cast_member)
       actor.save
       movie.actors << actor
