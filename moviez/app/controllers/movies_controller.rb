@@ -32,7 +32,9 @@ class MoviesController < ApplicationController
     movie.year = new_movie.year
     movie.plot = new_movie.plot
     movie.mpaa_rating = new_movie.mpaa_rating
-    movie.rating = params[:rating]
+    if params[:rating]
+      movie.rating = params[:rating]
+    end
     movie.poster = new_movie.poster
     new_movie.cast_members.each do |cast_member|
       actor = Actor.new(name: cast_member)
