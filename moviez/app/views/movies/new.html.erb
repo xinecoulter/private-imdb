@@ -12,9 +12,11 @@
     <li>
       <h3><%= movie.title %></h3>
         <ul>
+          <li><%= image_tag movie.poster %></li>
           <li>Year: <%= movie.year %></li>
-          <li>Plot: <%= movie.plot %></li>
+          <li>Plot: <%= truncate(movie.plot, length: 50) %></li>
           <li>MPAA Rating: <%= movie.mpaa_rating %></li>
+          <li>Length: <%= movie.length %></li>
         </ul>
       <%= button_to "Save this movie", add_new_movie_path(title: movie.title) %>
       <%= button_to "Favorite this movie", add_new_movie_path(title: movie.title, rating: 100) %>

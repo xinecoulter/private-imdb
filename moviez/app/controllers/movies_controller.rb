@@ -37,9 +37,14 @@ class MoviesController < ApplicationController
     end
     movie.poster = new_movie.poster
     new_movie.cast_members.each do |cast_member|
-      actor = Actor.new(name: cast_member)
-      actor.save
-      movie.actors << actor
+      if Actor.where(name: cast_member) == []
+        actor = Actor.new(name: cast_member)
+        actor.save
+        movie.actors << actor
+      else
+        actor = Actor.where(name: cast_member)
+        movie.actors << actor
+      end
     end
     movie.save
     redirect_to "/movies"

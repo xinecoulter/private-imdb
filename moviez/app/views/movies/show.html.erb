@@ -4,7 +4,7 @@
   <li>Year: <%= @movie.year %></li>
   <li>Plot: <%= @movie.plot %></li>
   <li>MPAA Rating: <%= @movie.mpaa_rating %></li>
-  <li>Rating: <%= @movie.rating %><%= button_to "+1", edit_movie_path(rating: "up") %><%= button_to "-1", edit_movie_path(rating: "down") %><%= button_to "Favorite this movie", edit_movie_path(rating: "favorite") %></li>
+  <li>Rating: <%= number_to_percentage(@movie.rating, precision: 0) %><%= button_to "+1", edit_movie_path(rating: "up") %><%= button_to "-1", edit_movie_path(rating: "down") %><%= button_to "Favorite this movie", edit_movie_path(rating: "favorite") %></li>
   <li>Cast:
     <ul>
       <% @movie.actors.each do |actor| %>
